@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Admin Dashboard</h1>
+
+  <!-- Package Logging Form -->
+  <form id="packageForm">
+    <label>First Name:</label>
+    <input type="text" id="firstName" required><br>
+
+    <label>Last Name:</label>
+    <input type="text" id="lastName" required><br>
+
+    <label>Email:</label>
+    <input type="email" id="email" required><br>
+
+    <div id="packagesContainer">
+      <h3>Packages</h3>
+    </div>
+
+    <!-- Buttons on the first line -->
+    <div class="form-buttons">
+      <button type="button" onclick="addPackageRow()">Add Package</button>
+      <button type="submit">Log Package(s)</button>
+    </div>
+
+    <!-- Reset button on its own line -->
+    <div class="reset-button">
+      <button type="button" class="reset-btn" onclick="resetPackages()">Reset All Packages</button>
+    </div>
+  </form>
+
+  <!-- Packages Table -->
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Carrier</th>
+        <th>Shipper</th>
+        <th>Arrival Time</th>
+        <th>Status</th>
+        <th>Pickup Time</th>
+        <th>Signature</th>
+      </tr>
+    </thead>
+    <tbody id="packagesBody"></tbody>
+  </table>
+
+  <!-- Shared JS -->
+  <script src="script.js"></script>
+</body>
+</html>

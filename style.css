@@ -1,0 +1,192 @@
+/* ---------------- General Page Styling ---------------- */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f7f9fc;
+  color: #333;
+  margin: 0;
+  padding: 20px;
+}
+
+h1, h2, h3 {
+  color: #1f4e79;
+  margin-bottom: 15px;
+}
+
+/* ---------------- Buttons ---------------- */
+button {
+  cursor: pointer;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  background-color: #1f4e79;
+  color: white;
+  margin: 5px 0;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: #163a58;
+}
+
+button.reset-btn {
+  background-color: #d9534f;
+}
+
+button.reset-btn:hover {
+  background-color: #b52b24;
+}
+
+button.remove-row-btn {
+  background-color: #d9534f;
+  color: white;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+button.remove-row-btn:hover {
+  background-color: #b52b24;
+}
+
+/* ---------------- Form Styling ---------------- */
+form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  margin-bottom: 30px;
+}
+
+form label {
+  display: inline-block;
+  width: 100px;
+  font-weight: bold;
+}
+
+form input {
+  padding: 6px 10px;
+  margin-bottom: 10px;
+  width: 200px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* ---------------- Package Input Rows ---------------- */
+.packageRow {
+  margin-bottom: 10px;
+  background-color: #eef2f7;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* ---------------- Admin Table Styling ---------------- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+th, td {
+  padding: 12px 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #1f4e79;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f4f7;
+}
+
+tr:hover {
+  background-color: #e1e7f1;
+}
+
+/* ---------------- Recipient Page / Package Cards ---------------- */
+#results div {
+  background-color: #fff;
+  margin-bottom: 12px;
+  padding: 12px;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+#results p {
+  margin: 0 0 8px 0;
+}
+
+#results button {
+  margin-top: 5px;
+}
+
+/* ---------------- Main Page Title ---------------- */
+.main-title {
+  text-align: center;
+  font-size: 36px;
+  font-weight: bold;
+  color: #1f4e79;
+  margin-bottom: 30px;
+}
+
+/* ---------------- Centered Kiosk Layout ---------------- */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+#kioskContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  text-align: center;
+}
+
+/* Center the search input and button */
+#searchContainer {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#searchContainer input, #searchContainer button {
+  font-size: 18px;
+  padding: 10px 15px;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+/* ---------------- Buttons layout ---------------- */
+.form-buttons {
+  margin-bottom: 15px; /* space below Add/Log buttons */
+}
+
+.reset-button {
+  margin-top: 10px; /* space above Reset button */
+}
+
+/* ---------------- Responsive Layout ---------------- */
+@media screen and (max-width: 768px) {
+  form label {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+
+  form input {
+    width: 100%;
+  }
+
+  table, th, td {
+    font-size: 14px;
+  }
+
+  #searchContainer input, #searchContainer button {
+    width: 80%;
+    font-size: 16px;
+  }
+}
