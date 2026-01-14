@@ -2,59 +2,67 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Admin Dashboard</title>
+  <title>Admin Package Log</title>
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
+
 <body>
 
-  <h1>Admin Dashboard</h1>
+<h1>Toolbox Package Administration</h1>
 
-  <!-- Package Logging Form -->
-  <form id="packageForm">
-    <label>First Name:</label>
-    <input type="text" id="firstName" required><br>
+<h2>Log New Packages</h2>
 
-    <label>Last Name:</label>
-    <input type="text" id="lastName" required><br>
+<form id="packageForm">
 
-    <label>Email:</label>
-    <input type="email" id="email" required><br>
+  <label>First Name:</label>
+  <input type="text" id="firstName" required>
 
-    <div id="packagesContainer">
-      <h3>Packages</h3>
-    </div>
+  <label>Last Name:</label>
+  <input type="text" id="lastName" required>
 
-    <!-- Buttons on the first line -->
-    <div class="form-buttons">
-      <button type="button" onclick="addPackageRow()">Add Package</button>
-      <button type="submit">Log Package(s)</button>
-    </div>
+  <label>Email:</label>
+  <input type="email" id="email" required>
 
-    <!-- Reset button on its own line -->
-    <div class="reset-button">
-      <button type="button" class="reset-btn" onclick="resetPackages()">Reset All Packages</button>
-    </div>
-  </form>
+  <h3>Packages</h3>
 
-  <!-- Packages Table -->
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Email</th>
-        <th>Carrier</th>
-        <th>Shipper</th>
-        <th>Arrival Time</th>
-        <th>Status</th>
-        <th>Pickup Time</th>
-        <th>Signature</th>
-      </tr>
-    </thead>
-    <tbody id="packagesBody"></tbody>
-  </table>
+  <div id="packagesContainer">
+  </div>
 
-  <!-- Shared JS -->
-  <script src="script.js"></script>
+  <div class="form-buttons">
+    <button type="button" onclick="addPackageRow()">Add Another Package</button>
+    <button type="submit">Log Packages</button>
+  </div>
+
+</form>
+
+<hr>
+
+<h2>All Logged Packages</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Carrier</th>
+      <th>Shipper</th>
+      <th>Arrival Time</th>
+      <th>Status</th>
+      <th>Pickup Time</th>
+      <th>Signature</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody id="packagesBody">
+  </tbody>
+</table>
+
+<div style="margin-top: 20px; text-align: center;">
+  <button onclick="resetPackages()" class="reset-btn">
+    Reset All Packages
+  </button>
+</div>
+
 </body>
 </html>
